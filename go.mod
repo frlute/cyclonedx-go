@@ -1,4 +1,4 @@
-module github.com/CycloneDX/cyclonedx-go
+module github.com/frlute/cyclonedx-go
 
 go 1.18
 

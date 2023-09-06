@@ -20,7 +20,7 @@ package cyclonedx_test
 import (
 	"fmt"
 
-	cdx "github.com/CycloneDX/cyclonedx-go"
+	cdx "github.com/frlute/cyclonedx-go"
 )
 
 func ExampleNewBOMLink() {
@@ -29,11 +29,11 @@ func ExampleNewBOMLink() {
 	bom.Version = 2
 	bom.Metadata = &cdx.Metadata{
 		Component: &cdx.Component{
-			BOMRef:     "pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.5.0?type=module",
+			BOMRef:     "pkg:golang/github.com/frlute/cyclonedx-go@v0.5.0?type=module",
 			Type:       cdx.ComponentTypeLibrary,
-			Name:       "github.com/CycloneDX/cyclonedx-go",
+			Name:       "github.com/frlute/cyclonedx-go",
 			Version:    "v0.5.0",
-			PackageURL: "pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.5.0?type=module",
+			PackageURL: "pkg:golang/github.com/frlute/cyclonedx-go@v0.5.0?type=module",
 		},
 	}
 

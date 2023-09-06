@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"os"
 
-	cdx "github.com/CycloneDX/cyclonedx-go"
+	cdx "github.com/frlute/cyclonedx-go"
 )
 
 // This example demonstrates how to create and encode a BOM in CycloneDX format.
@@ -50,12 +50,12 @@ func Example_encode() {
 	// https://cyclonedx.org/use-cases/#inventory
 	components := []cdx.Component{
 		{
-			BOMRef:     "pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0",
+			BOMRef:     "pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0",
 			Type:       cdx.ComponentTypeLibrary,
 			Author:     "CycloneDX",
 			Name:       "cyclonedx-go",
 			Version:    "v0.3.0",
-			PackageURL: "pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0",
+			PackageURL: "pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0",
 		},
 	}
 
@@ -65,11 +65,11 @@ func Example_encode() {
 		{
 			Ref: "pkg:golang/acme-inc/acme-app@v1.0.0",
 			Dependencies: &[]string{
-				"pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0",
+				"pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0",
 			},
 		},
 		{
-			Ref: "pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0",
+			Ref: "pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0",
 		},
 	}
 
@@ -100,18 +100,18 @@ func Example_encode() {
 	//     </properties>
 	//   </metadata>
 	//   <components>
-	//     <component bom-ref="pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0" type="library">
+	//     <component bom-ref="pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0" type="library">
 	//       <author>CycloneDX</author>
 	//       <name>cyclonedx-go</name>
 	//       <version>v0.3.0</version>
-	//       <purl>pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0</purl>
+	//       <purl>pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0</purl>
 	//     </component>
 	//   </components>
 	//   <dependencies>
 	//     <dependency ref="pkg:golang/acme-inc/acme-app@v1.0.0">
-	//       <dependency ref="pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0"></dependency>
+	//       <dependency ref="pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0"></dependency>
 	//     </dependency>
-	//     <dependency ref="pkg:golang/github.com/CycloneDX/cyclonedx-go@v0.3.0"></dependency>
+	//     <dependency ref="pkg:golang/github.com/frlute/cyclonedx-go@v0.3.0"></dependency>
 	//   </dependencies>
 	// </bom>
 }
